@@ -1,4 +1,4 @@
-#to-do-list
+# To-do List
 
 - [Javascript](https://github.com/may54ther/to-do-list/README.md/#Javascript)
 - [Vue.js](https://github.com/may54ther/to-do-list/README.md/#Vue.js)
@@ -25,7 +25,7 @@
   - All : 완료되지 않은 항목, 완료된 항목의 모든 To-Do 리스트를 볼 수 있다.
   - Active : 완료되지 않은 To-Do 리스트를 볼 수 있다.
   - Done : 완료 된 To-Do 리스트를 볼 수 있다.
-    ※ 버튼의 기능은 작동하지만 눌렀을 때 버튼이 활성화 되도록 변경해야 함(\*)
+    <br/>※ 버튼의 기능은 작동하지만 눌렀을 때 버튼이 활성화 되도록 변경해야 함(\*)
 
-  미리보기
+  [미리보기]
   ![Todos Preview Image](./Todos-design.png)
