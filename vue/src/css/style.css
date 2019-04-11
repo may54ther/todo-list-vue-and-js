@@ -1,0 +1,18 @@
+.header, .content{position:relative; width:1100px; margin: 0 auto}
+.header{padding-top:140px; text-align: right; color: #fff; font-size: 80px}
+.header h1{font-weight: lighter}
+
+.content section{background-color: #fff}
+.content .content__add{height: 108px; padding: 20px}
+.content .content__add .add__input{width: calc(100% - 40px); height: 100%; padding: 0 20px; border: none; border-bottom: 1px solid #eee; font-size: 36px}
+.content .content__add .add__input::placeholder{color: #bbb}
+.content .content__items{min-height: 400px; margin: 27px 0 10px 0; padding: 20px; overflow:hidden}
+.content .content__items button{padding-left:80px; font-size: 24px; width: 100%; height: 119px; border-bottom: 1px solid #ccc; color:#fc5158; text-align: left; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; background: url(../assets/ico_active.png) no-repeat; background-size: 34px; background-position: 20px center}
+.content .content__items button.done{background:url(../assets//ico_done.png) no-repeat; background-size: 34px; background-position: 20px center; text-decoration-line: line-through; color: #bbb}
+.content .content__btns{padding: 8px 20px; margin-bottom: 100px}
+.content .content__btns button{padding: 4px 20px; margin:0 10px; border: 1px solid #ccc; border-radius: 5px; color: #bbb; transition: all .4s}
+.content .content__btns button:hover, .content .content__btns button.on{color: #fff; background-color: #fc5158; border-color: #fc5158;}
+
+@media screen and (max-width:1100px) {
+  .header, .content{width: 100%;}
+}
