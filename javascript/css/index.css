@@ -52,25 +52,27 @@ a:hover{color:#333; text-decoration: none}
 
 
 .popup {display:none; position: fixed; width: 100%; height: 100%; top:0; left:0; background: #fff; z-index: 10; animation: fade .8s linear;}
-.popup p, .popup .form__name{position: absolute; top: 50%;}
-.popup p{left:0; width:100%; text-align:center; margin-top: -140px; font-size:40px; font-weight: normal}
-.popup .form__name{left: 50%; margin-left: -500px; margin-top: -40px}
-.popup .form__name input{width: 920px; line-height: 80px; padding: 0 40px; border-radius: 40px; border: 1px solid #999; color:#666; font-size: 22px}
+.popup .popup__inner{position: relative; top: 30%; width:1000px; text-align: center}
+.popup p{font-size: 40px; font-weight: normal; padding-bottom: 40px}
+.popup .form__name input{width: calc(100% - 80px); line-height: 80px; padding: 0 40px; border-radius: 40px; border: 1px solid #999; color:#666; font-size: 22px}
 
 .wrap{position:relative; top:0; left:0; width:100%; height:1200px; background-size: cover ; background-position: center 0; animation: fade .5s linear; overflow: hidden;}
-.wrap .wrap__inner{width: 1000px; margin: 0 auto;}
+.wrap .wrap__inner{width: 1000px; margin: 0 auto; overflow: hidden}
 
 /*header*/
-.header__clock{padding-top:220px; font-size: 100px}
-.header__weather{margin-top: -10px; margin-bottom: 40px}
-.header__greetings{display: none; font-size: 36px; font-weight: lighter; text-align:center; padding-bottom: 80px}
+.header{position: relative; width: 100%; overflow: hidden;}
+.header .header__clock{padding-top:220px; font-size: 100px}
+.header .header__weather{margin-top: -10px; margin-bottom: 40px}
+.header .header__greetings{font-size: 36px; font-weight: lighter; text-align:center; padding-bottom: 80px}
 
 /*content*/
-.form__todo input{width:calc(100% - 96px); border-radius: 33px; padding: 0 48px; line-height: 66px; border: 0; color: #333; font-size: 20px; transition: all .35s}
-.list__todo{position:relative; width:824px; height:310px; margin: 20px auto 0; transition: all .5s .35s; overflow-y: auto}
-.list__todo li{position:relative; padding-left:20px; border-bottom: 1px solid #fff; color: #fff; font-size: 20px; overflow: hidden; padding-top: 10px; line-height: 60px; background: rgba(0, 0, 0, 0.3); margin-bottom: 5px}
-.list__todo li span{display: block; float: left; width: 92%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-.list__todo li button{position: absolute; bottom:0px; right: 10px; width: 40px; height:60px; background: url(../img/btn_del.png) no-repeat; background-size: 24px; background-position: center}
+.content{position: relative; width: 100%; overflow: hidden;}
+.content .form__todo{text-align: center}
+.content .form__todo input{width:calc(100% - 96px); border-radius: 33px; padding: 0 48px; line-height: 66px; border: 0; color: #333; font-size: 20px; transition: all .35s}
+.content .list__todo{position:relative; width:824px; height:310px; margin: 20px auto 0; transition: all .5s .35s; overflow-y: auto}
+.content .list__todo li{position:relative; padding-left:20px; border-bottom: 1px solid #fff; color: #fff; font-size: 20px; overflow: hidden; padding-top: 10px; line-height: 60px; background: rgba(0, 0, 0, 0.3); margin-bottom: 5px}
+.content .list__todo li span{display: block; float: left; width: 92%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.content .list__todo li button{position: absolute; bottom:0px; right: 10px; width: 40px; height:60px; background: url(../img/btn_del.png) no-repeat; background-size: 24px; background-position: center}
 
 .on{display: block}
 
@@ -79,6 +81,27 @@ a:hover{color:#333; text-decoration: none}
 ::-webkit-scrollbar-track {} 
 ::-webkit-scrollbar-thumb {background: rgba(255,255,255,.5); border-radius: 5px} 
 
-@media screen and (max-height:900px){
-  .wrap{position: absolute; height:1000px}
+@media screen and (max-width:1000px){
+  .wrap .wrap__inner, .popup .popup__inner{width: 100%}
+  .popup .form__name input, .content .form__todo input{width: 80%; padding: 0 5%}
 }
+
+
+@media screen and (max-width:860px){
+.header__clock{padding-top:220px; font-size: 60px}
+.content .list__todo{width: 90%}
+}
+
+@media screen and (max-width:640px){
+  .header .header__clock{font-size: 70px}
+  .header .header__greetings{font-size: 28px}
+  .content .list__todo li span{width:85%; font-size: 18px}
+}
+
+
+@media screen and (max-width:480px){
+  .popup p{font-size: 24px}
+  .popup .form__name input{font-size: 16px; line-height: 60px}
+  .content .list__todo li span{width: 80%; font-size: 16px}
+}
+
