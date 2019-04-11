@@ -1,6 +1,6 @@
-const form = document.querySelector(".js-form"),
-  input = form.querySelector("input"),
-  greeting = document.querySelector(".js-greetings");
+const popup = document.querySelector(".popup"),
+  input = popup.querySelector("input"),
+  greeting = document.querySelector(".header__greetings");
 
 const USER_LS = "userName";
 
@@ -17,14 +17,14 @@ function handleSubmit(event) {
 }
 
 function askForName() {
-  form.classList.add("on");
+  popup.classList.add("on");
   greeting.classList.remove("on");
 
-  form.addEventListener("submit", handleSubmit);
+  popup.addEventListener("submit", handleSubmit);
 }
 
 function paintGreeting(name) {
-  form.classList.remove("on");
+  popup.classList.remove("on");
   greeting.classList.add("on");
   greeting.innerText = `안녕, ${name}!`;
 }

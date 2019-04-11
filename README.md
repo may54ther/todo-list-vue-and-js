@@ -6,14 +6,16 @@
 ## Javascript
 
 노마드코더의 자바스크립트 강의를 보고 만든 클론 코딩
-[Link](https://may54ther.github.io/to-do-list/javascript/index.html)
+[[바로가기]](https://may54ther.github.io/to-do-list/javascript/index.html)
 
 - 시간 제공
 - 사용자 이름 입력(localStorage)
 - To-Do 리스트(localStorage, 삭제)
 - 배경 전환 효과
-  ![Todos Preview Image](./todo-design-vs.gif)
-  <br/>
+
+<br/>
+
+![Todos Preview Image](./todo-design-vs.gif) <br/><br/>
 
 ## Vue.js
 
@@ -28,4 +30,6 @@
   - Done : 완료 된 To-Do 리스트를 볼 수 있다.
     <br/>※ 버튼의 기능은 작동하지만 눌렀을 때 버튼이 활성화 되도록 변경해야 함(\*)
 
-  ![Todos Preview Image](./Todos-design.png)
+<br/>
+
+![Todos Preview Image](./Todos-design.png)

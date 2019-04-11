@@ -1,4 +1,4 @@
-const weather = document.querySelector(".js-weather");
+const weather = document.querySelector(".header__weather");
 
 const API_KEY = "732549c95b8f5c502a4107e001558849",
   COORDS = "coords";
@@ -10,8 +10,9 @@ function getWeather(lat, lon) {
     })
     .then(function(json) {
       const temp = json.main.temp;
+      const country = json.sys.country;
       const place = json.name;
-      weather.innerText = `${place}, ${Math.floor(temp)}˚`;
+      weather.innerText = `${place}, ${country}. 현재 온도 ${Math.floor(temp)}˚`;
     });
 }
 
@@ -32,7 +33,7 @@ function handleGeoSuccess(pos) {
 }
 
 function handleGeoError() {
-  console.error("Error");
+  console.error("Weather API 호출 실패");
 }
 
 function askForCoords() {

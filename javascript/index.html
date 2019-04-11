@@ -7,22 +7,32 @@
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <div id="wrap">
+    <div class="popup">
+      <p>당신의 이름은?</p>
+      <form class="form__name">
+        <input type="text" placeholder="이름 입력" />
+      </form>
+    </div>
+
+    <div class="wrap">
       <div class="wrap__inner">
-        <div class="js-clock">
-          <h1>00:00</h1>
+        <header class="header">
+          <h1 class="header__clock">00:00</h1>
+
+          <p class="header__weather"></p>
+          <h2 class="header__greetings"></h2>
+        </header>
+
+        <div class="content">
+          <h2 class="blind">To-Do List</h2>
+          <form class="form__todo">
+            <input type="text" placeholder="새로운 할 일" />
+          </form>
+          <ul class="list__todo"></ul>
         </div>
-        <form class="js-form">
-          <input type="text" placeholder="당신의 이름은?" />
-        </form>
-        <p class="js-weather"></p>
-        <h2 class="js-greetings"></h2>
-        <form class="js-toDoForm">
-          <input type="text" placeholder="새로운 할 일" />
-        </form>
-        <ul class="js-toDoList"></ul>
       </div>
     </div>
+
     <script src="js/clock.js"></script>
     <script src="js/greeting.js"></script>
     <script src="js/todo.js"></script>

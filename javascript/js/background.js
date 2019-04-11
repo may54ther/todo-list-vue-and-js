@@ -1,4 +1,4 @@
-const wrap = document.getElementById("wrap");
+const wrap = document.querySelector(".wrap");
 
 const IMG_NUM = 5;
 
