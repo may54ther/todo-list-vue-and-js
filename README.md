@@ -1,7 +1,7 @@
 # To-do List
 
-- [Javascript](https://github.com/may54ther/to-do-list/README.md/#Javascript)
-- [Vue.js](https://github.com/may54ther/to-do-list/README.md/#Vue.js)
+- [Javascript](https://github.com/may54ther/to-do-list/blob/master/README.md#javascript)
+- [Vue.js](https://github.com/may54ther/to-do-list/blob/master/README.md#vuejs)
 
 ## Javascript
 
