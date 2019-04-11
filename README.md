@@ -11,8 +11,8 @@
 - 사용자 이름 입력(localStorage)
 - To-Do 리스트(localStorage, 삭제)
 - 배경 전환 효과
-
-<br/>
+  ![Todos Preview Image](./todo-design-vs.gif)
+  <br/>
 
 ## Vue.js
 

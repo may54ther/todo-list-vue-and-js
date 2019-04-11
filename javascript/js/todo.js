@@ -8,14 +8,17 @@ let toDoArr = [];
 function deleteToDo(event) {
   const btn = event.target;
   const li = btn.parentNode;
-  toDoList.removeChild(li);
+  const conf = confirm("삭제하실래요?");
+  if (conf) {
+    toDoList.removeChild(li);
 
-  const cleanTodos = toDoArr.filter(function(toDo) {
-    return toDo.id !== parseInt(li.id);
-  });
+    const cleanTodos = toDoArr.filter(function(toDo) {
+      return toDo.id !== parseInt(li.id);
+    });
 
-  toDoArr = cleanTodos;
-  saveToDos();
+    toDoArr = cleanTodos;
+    saveToDos();
+  }
 
   // const delId = event.target.parentNode.id;
   // const target = document.getElementById(delId);
@@ -35,7 +38,6 @@ function paintToDo(text) {
   const span = document.createElement("span");
   const newId = toDoArr.length + 1;
 
-  delBtn.innerText = "❌";
   delBtn.addEventListener("click", deleteToDo);
   span.innerText = text;
   li.appendChild(span);
@@ -59,10 +61,10 @@ function handleSubmit(event) {
 }
 
 function loadTodos() {
-  const loadeshTodos = localStorage.getItem(TODOS_LS);
+  const loadedTodos = localStorage.getItem(TODOS_LS);
 
-  if (loadeshTodos !== null) {
-    const parseToDos = JSON.parse(loadeshTodos);
+  if (loadedTodos !== null) {
+    const parseToDos = JSON.parse(loadedTodos);
     parseToDos.forEach(function(item) {
       paintToDo(item.text);
     });
