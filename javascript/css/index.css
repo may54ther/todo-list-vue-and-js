@@ -52,7 +52,7 @@ a:hover{color:#333; text-decoration: none}
 
 
 .popup {display:none; position: fixed; width: 100%; height: 100%; top:0; left:0; background: #fff; z-index: 10; animation: fade .8s linear;}
-.popup .popup__inner{position: relative; top: 30%; width:1000px; text-align: center}
+.popup .popup__inner{position: relative; top: 30%; width:1000px; text-align: center; margin: 0 auto}
 .popup p{font-size: 40px; font-weight: normal; padding-bottom: 40px}
 .popup .form__name input{width: calc(100% - 80px); line-height: 80px; padding: 0 40px; border-radius: 40px; border: 1px solid #999; color:#666; font-size: 22px}
 
