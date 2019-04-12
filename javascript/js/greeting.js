@@ -11,9 +11,11 @@ function saveName(name) {
 function handleSubmit(event) {
   event.preventDefault();
 
-  const currentValue = input.value;
-  paintGreeting(currentValue);
-  saveName(currentValue);
+  const currentValue = input.value.trim();
+  if (currentValue != "") {
+    paintGreeting(currentValue);
+    saveName(currentValue);
+  }
 }
 
 function askForName() {
