@@ -1,5 +1,7 @@
 <template>
-  <button @click="clickButton" :class="`${state}`">{{ label }}</button>
+  <li>
+    <a @click="clickButton" :class="`${state}`">{{ label }}</a>
+  </li>
 </template>
 
 <script>

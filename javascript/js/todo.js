@@ -48,9 +48,11 @@ function paintToDo(text) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let currentValues = toDoInput.value;
-  paintToDo(currentValues);
-  toDoInput.value = "";
+  let currentValues = toDoInput.value.trim();
+  if (currentValues != "") {
+    paintToDo(currentValues);
+    toDoInput.value = "";
+  }
 }
 
 function loadTodos() {
@@ -61,8 +63,6 @@ function loadTodos() {
     parseToDos.forEach(function(item) {
       paintToDo(item.text);
     });
-  } else {
-    //
   }
 }
 

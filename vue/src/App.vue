@@ -18,14 +18,15 @@
         </section>
         <section class="content__items">
           <h2 class="blind">할 일</h2>
-          <template v-for="todo in activeTodoList">
-            <Todo
-              :label="todo.label"
-              :key="todo"
-              :state="todo.state"
-              @todoItemsClick="toggleTodoState(todo)"
-            />
-          </template>
+          <ul>
+            <template v-for="todo in activeTodoList">
+              <Todo
+                :label="todo.label"
+                :state="todo.state"
+                @todoItemsClick="toggleTodoState(todo)"
+              />
+            </template>
+          </ul>
         </section>
 
         <section class="content__btns">
@@ -54,6 +55,10 @@ export default {
         {
           label: "Hello, Vue!",
           state: "active"
+        },
+        {
+          label: "Hello, CSS!",
+          state: "done"
         }
       ],
       btnStates: ["all", "active", "done"],
@@ -70,10 +75,18 @@ export default {
   methods: {
     changeCurrentState(state) {
       this.currentState = state;
+      let targetBtns = [].slice.call(
+        document.querySelector(".content__btns ").getElementsByTagName("button")
+      );
+
+      targetBtns.filter(btn =>
+        btn.classList.contains(`${state}`)
+          ? btn.classList.add("on")
+          : btn.classList.remove("on")
+      );
     },
     addNewTodo(key) {
-      // this.userInput.replace(/^\s+|\s+$/g, "");
-      if (key.keyCode == 13 && this.userInput !== "") {
+      if (key.keyCode == 13 && this.userInput.trim() != "") {
         this.todoList.push({
           label: this.userInput,
           state: "active"
@@ -83,33 +96,22 @@ export default {
     },
     toggleTodoState(todo) {
       if (todo.state === "active") {
-        let conf = confirm("할 일을 모두 끝냈나요?");
+        let conf = confirm("Are you done?");
         if (conf) {
           todo.state = "done";
         }
-      }
-    },
-    btnStatesClick() {
-      if (
-        document
-          .querySelectorAll(".content__btnStates button")
-          .getAttribute("class") == "on"
-      ) {
-        document
-          .querySelectorAll(".content__btnStates button")
-          .setAttribute("class", "");
-      } else {
-        document
-          .querySelectorAll(".content__btnStates button")
-          .setAttribute("class", "on");
       }
     }
   },
   components: {
     Todo
+  },
+  mounted() {
+    document.querySelector(".all").classList.add("on");
   }
 };
-
-require("./css/reset.css");
-require("./css/style.css");
 </script>
+
+<style src="./css/reset.css"></style>
+<style src="./css/style.css"></style>
+
