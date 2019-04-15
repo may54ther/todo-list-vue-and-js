@@ -1,4 +1,5 @@
-const popup = document.querySelector(".popup"),
+const wrapTag = document.querySelector(".wrap"),
+  popup = document.querySelector(".popup"),
   input = popup.querySelector("input"),
   greeting = document.querySelector(".header__greetings");
 
@@ -27,7 +28,9 @@ function askForName() {
 
 function paintGreeting(name) {
   popup.classList.remove("on");
+  wrapTag.style.display = "block";
   greeting.classList.add("on");
+
   greeting.innerText = `안녕, ${name}!`;
 }
 

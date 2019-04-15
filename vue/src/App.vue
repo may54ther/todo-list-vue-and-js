@@ -75,7 +75,7 @@ export default {
   methods: {
     changeCurrentState(state) {
       this.currentState = state;
-      let targetBtns = [].slice.call(
+      let targetBtns = Array.from(
         document.querySelector(".content__btns ").getElementsByTagName("button")
       );
 
