@@ -3,15 +3,15 @@
 Javascript와 Vue를 사용해서 만든 To-Do List입니다.
 <br> 클론 강의 보고 틀을 제작 후 디자인/추가 사항을 수정하여 정리하였습니다.
 
-- [Javascript](https://github.com/may54ther/to-do-list/blob/master/README.md#javascript)
-- [Vue.js](https://github.com/may54ther/to-do-list/blob/master/README.md#vuejs)
+- [Javascript](https://github.com/may54ther/todoList/blob/master/README.md#javascript)
+- [Vue.js](https://github.com/may54ther/todoList/blob/master/README.md#vuejs)
 
 <br><br>
 
 ## Javascript
 
 노마드코더의 자바스크립트 강의를 보고 만든 클론 코딩
-[[바로가기]](https://may54ther.github.io/to-do-list/javascript/index.html)
+[[바로가기]](https://may54ther.github.io/todoList/javascript/index.html)
 
 - 시간 제공
 - 사용자 이름 입력(localStorage)
