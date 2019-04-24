@@ -26,7 +26,7 @@ Javascript와 Vue를 사용해서 만든 To-Do List입니다.
 ## Vue.js
 
 레시피 사이트의 뷰 투두리스트 강의를 보고 만든 클론 코딩
-[[바로가기]](https://may54ther.github.io/todoList/vue/index.html)
+[[바로가기]](https://may54ther.github.io/todoList/vue/dist/index.html)
 
 - To-Do 리스트(localStorage 저장 X, 삭제)
 - All, Active, Done의 형태로 To-Do 리스트 볼 수 있음
