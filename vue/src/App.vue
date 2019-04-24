@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="root">
     <div class="container">
       <header class="header">
         <h1>To-do List</h1>
