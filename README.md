@@ -1,43 +1,34 @@
-# Todo-List
+# TODO LIST (2 Version)
 
-Javascript와 Vue를 사용해서 만든 To-Do List입니다.
-<br> 클론 강의 보고 틀을 제작 후 디자인/추가 사항을 수정하여 정리하였습니다.
-
-- [Javascript](#javascript)
-- [Vue.js](#vuejs)
+강의를 참고하여 제작하였습니다.
 
 
-## Javascript
+## Javascript [🔗](https://may54ther.github.io/todolist.js/javascript/index.html)
 
-노마드코더의 자바스크립트 강의를 보고 만든 클론 코딩
-[[바로가기]](https://may54ther.github.io/todo-list-vue-and-js/javascript/index.html)
+> 💻노마드 코더 강의를 참고했습니다.
 
-- 시간 제공
-- 사용자 이름 입력(localStorage)
-- To-Do 리스트(localStorage, 삭제)
-- 배경 전환 효과
-- .trim()을 이용해 공백/내용 없이 엔터만 입력시에도 입력이 되었던 사항을 수정함
+### Features
+- ⚡현재 시간   
+- ⚡사용자 이름 등록 (`localStorage`)   
+- ⚡TODO 리스트 등록, 삭제 (`localStorage`)   
+- ⚡배경 이미지 전환 효과
+- ⚡반응형 페이지로 수정
+- ⚡그 외 디자인, 버튼 활성화 등의 기능 추가 
 
-
-
-![Todos Preview Image](./todo-design-vs.gif) <br/><br/>
-
-## Vue.js
-
-레시피 사이트의 뷰 투두리스트 강의를 보고 만든 클론 코딩
-[[바로가기]](https://may54ther.github.io/todo-list-vue-and-js/vue/dist/index.html)
-
-- To-Do 리스트(localStorage 저장 X, 삭제)
-- All, Active, Done의 형태로 To-Do 리스트 볼 수 있음
-
-  - All : 완료되지 않은 항목, 완료된 항목의 모든 To-Do 리스트를 볼 수 있다.
-  - Active : 완료되지 않은 To-Do 리스트를 볼 수 있다.
-  - Done : 완료 된 To-Do 리스트를 볼 수 있다.
-
-- ~~버튼의 기능은 작동하지만 눌렀을 때 버튼이 활성화 되도록 변경해야 함(\*)~~ [완료]
-  - array.filter()로 수정!
-- .trim()을 이용해 공백/내용 없이 엔터만 입력시에도 입력이 되었던 사항을 수정함
+### Preview
+![JavaScript Version](./todo-design-vs.gif) <br/><br/>
 
 
+## Vue.js [🔗](https://may54ther.github.io/todolist.js/vue/dist/index.html)   
+> 💻 레시피 사이트의 강의를 참고하였습니다.
 
-![Todos Preview Image](./Todos-design.png)
+### Features
+- ⚡TODO 리스트 등록, 삭제
+- ⚡TODO 리스트 목록은 완료 상태에 따라 필터링 가능
+  - `All` : 완료되지 않은 항목, 완료된 항목의 모든 TODO 리스트를 볼 수 있다.
+  - `Active` : 완료되지 않은 To-Do 리스트를 볼 수 있다.
+  - `Done` : 완료 된 To-Do 리스트를 볼 수 있다.
+- ⚡그 외 디자인, 버튼 활성화 등의 기능 추가 
+
+### Preview
+![Vue.js Version](./Todos-design.png)
